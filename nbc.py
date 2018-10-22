@@ -1,3 +1,11 @@
+# Author: NIHAR MUKHIYA
+# Date: 22/10/2018
+# Description: Python implementation of Naive-Bayes classifier.
+#              Input is a csv file, class and the constraints of new value to be inserted.
+#              Output is the prediction of the class to which the new value with given constraints will belong to!
+
+
+
 from pandas import *
 import tkinter as tk
 from tkinter import filedialog
