@@ -26,7 +26,9 @@ for i in range(len(e.index)):
     dict[temp] = e.iloc[i][j+2]
 print(collect)
 print(dict)
-collect.sort()
+ni = sorted(collect)
+print(ni)
+pass
 list2 = collect[0: input_k]
 list3 = []
 for m in list2:
