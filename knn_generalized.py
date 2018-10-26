@@ -9,6 +9,8 @@ root = tk.Tk()
 file_path = filedialog.askopenfilename()
 e = pandas.read_csv(file_path, header = 0)
 a = Table.read_table(file_path)
+print("your input table is: ")
+print(a)
 
 col_names = list(a.labels)
 temp2 = copy.deepcopy(list(col_names))
@@ -28,8 +30,7 @@ for y in range(len(e.index)):
     temp3.extend((temp, e.iloc[y][len(temp2) - 1]))
     collect.append(temp)
     final_values.append(temp3)
-print(collect)
-print(final_values)
+
 input_k = int(input("enter k: "))
 
 sorted(collect)
@@ -38,5 +39,6 @@ list3 = []
 for m in range(len(list2)):
     list3.append(final_values[m][1])
 common = max(set(list3), key=list3.count)
+print("the class values of your "+str(input_k)+ " nearest neighbours are: ")
 print(list3)
 print("your entry belongs to class: " +common)
